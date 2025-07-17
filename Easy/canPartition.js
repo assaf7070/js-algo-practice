@@ -13,8 +13,16 @@ The array may contain duplicates.
 Multiple solutions can exist, any solution is sufficient to return true.
 */
 
-function canPartition( /*args*/ ) {
-  //your code
+function canPartition( numbers ) {
+  //your code 
+  for(let i=0;i<numbers.length;i++)
+  {
+    const target = numbers.shift()
+    if(target === numbers.reduce((acc, currVal) => acc * currVal, 1)) return true;
+    numbers.push(target);
+
+  }
+  return false;
 }
 
 exports.solution = canPartition;

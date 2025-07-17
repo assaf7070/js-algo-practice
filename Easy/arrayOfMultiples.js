@@ -11,8 +11,12 @@ Notes
 Notice that num is also included in the returned array.
 */
 
-function arrayOfMultiples(/*args*/) {
+function arrayOfMultiples(num, len) {
   //your code
+  let res =[];
+  for (let i=1;i<=len;i++)
+    res.push(i*num);
+  return res;
 }
 
 exports.solution = arrayOfMultiples;
